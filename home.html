@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Video Lecture Page</title>
+    <link rel='canonical' href='https://getbootstrap.com/docs/5.0/examples/starter-template/'>
+    <!-- Bootstrap core CSS -->
+    <link href='assets/dist/css/bootstrap.min.css' rel='stylesheet'>   <title>BrainWave</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            color: #000000;
+            background-color:#ffffff ;
+            padding: 1em;
+            display: flex;
+            flex-grow: 1;
+        }
+        
+        footer {
+     
+        background-size: cover;
+        background-position: center;
+        color: #fff; /* Set text color to be visible against the background */
+        padding: 50px 0; /* Adjust padding as needed */
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .col-md-4 {
+        width: 30%; /* Adjust column width as needed */
+    }
+
+    .social-icons img {
+        width: 30px; /* Adjust social media icon size as needed */
+        margin-right: 10px;
+    }
+        section {
+            padding: 20px;
+            text-align: center;
+        }
+
+        main {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+        }
+
+        #login-box {
+            width: 500px;
+            background-color: #ffffff;
+            padding: 50px;
+            flex-grow: 1;
+            box-shadow: 0 0 10px rgba(37, 36, 107, 0.1);
+        }
+
+        #video-container {
+            flex-grow: 1;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 20px 40px;
+            background-color: #609ae6;
+            color: #06020e;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #6eb7da;
+        }
+
+        .videos {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px;
+    border-top: 1px solid #ffffff;
+    overflow-y: scroll;
+}
+
+.videos_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.video {
+    width: 400px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+}
+
+.video_thumbnail {
+    width: 100%;
+    height: 300px;
+}
+
+.video_thumbnail img {
+    object-fit: cover;
+    height: 250px;
+    width: 400px;
+}
+
+.author img {
+    object-fit: cover;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.video_details {
+    display: flex;
+    margin-top: 10px;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+}
+
+.title h3 {
+    color: rgb(3, 3, 3);
+    line-height: 18px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.title h3 a {
+        color: black; /* Change to the desired color */
+    }
+        #contact-us {
+            background-color: #d6e3f7;
+            color: #1a1717;
+            padding: 20px;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #contact-us p {
+            margin: 0;
+        }
+
+        fieldset {
+            width: 100%;
+            text-align: right;
+            border-color: #000000;
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: ;
+        }
+
+        .section-container img {
+            width: 300px; /* Adjust image width as needed */
+            height: 300px; /* Adjust image height as needed */
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .section-content {
+            flex-grow: 1;
+        }
+
+        h1{
+            color: #000000;
+        }
+        .bd-placeholder-img {
+                font-size: 1.125rem;
+                text-anchor: middle;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                user-select: none;
+            }
+    
+            @media (min-width: 768px) {
+                .bd-placeholder-img-lg {
+                    font-size: 3.5rem;
+                }
+            }
+    
+            .connected-list {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+    
+            .list-item {
+                display: flex;
+                align-items: center;
+                margin-bottom: 20px;
+            }
+    
+            .icon-container {
+                width: 30px;
+                height: 30px;
+                background-color: #3498db;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: 10px;
+            }
+    
+
+            .logo {
+                height: 70px;
+                width: 90px;
+                margin-right: 10px;
+                margin-bottom: 2px; /* Added margin-bottom for better spacing */
+            }
+    
+            .fs-4 {
+                margin-bottom: 0; /* Remove default margin-bottom to align with logo */
+            }
+    
+            .nav-pills {
+                align-items: center;
+            }
+    
+            a {
+                text-decoration: none;
+            }
+    
+            .course {
+                font-size: 40px;
+                font-weight: 500;
+                color: #0d6efd;
+            }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, p {
+            margin: 0;
+        }
+
+        div {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .select-btn {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        .select-btn:hover {
+            background-color: white;
+            color: black;
+            border: 2px solid #4CAF50;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        nav img {
+            width: 30px;
+            height: 30px;
+        }
+
+        nav h1 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #0d6efd;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #343a40;
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+
+        nav a.selected {
+            font-weight: bold;
+            color: #0d6efd;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+
+        <header class='d-flex flex-wrap justify-content-between align-items-center py-3 mb-4 border-bottom'>
+            <a href='#' class='d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none'>
+                <img class='logo' src='logo.jpg'>
+                <p style=" font-size: 38px;">BrainWave</p>
+            </a>
+            <!-- ... (your existing header content) ... -->
+            <ul class='nav nav-pills'>
+         <!--      <li class='nav-item'><a href='lecture.php' type='button' class='btn btn-outline-primary me-2' class='nav-link active' aria-current='page'>Lectures</a></li>     -->
+                  <!--       <li class='nav-item'><a href='pdf.php' type='button' class='btn btn-outline-primary me-2'>Study materials</a></li>      
+          <li class='nav-item'><a href='testhtml.php?courseid=<?php echo $courseId; ?>' type='button' class='btn btn-outline-primary me-2'>Take Test</a></li>
+ <li class='nav-item'><a href='feedback.php' type='button' class='btn btn-outline-primary me-2'>Feedback</a></li>-->
+                <li class='nav-item'><a href='faq.php' type='button' class='btn btn-outline-primary me-2'>FAQs</a></li>
+                <li class='nav-item'><a href='aboutus.php' type='button' class='btn btn-outline-primary me-2'>About us</a></li>
+            </ul>
+            <!-- ... (your existing content) ... -->
+            
+     
+
+    </header>
+    </header>
+
+    <main>
+ 
+        <div id="login-box">
+            <!-- Add your sign-up and login forms here -->
+            <section id="catchy-line">
+                <h2 style="text-align: center; color: #135fec;">Unlock a World of Knowledge!</h2><br>
+                <p style="text-align: center; font-size: 22px;">Join BrainWave and embark on a journey of learning and growth.</p>
+            </section><br>
+            <!-- Add your forms here -->
+            <section id="signup">
+                <!-- Include your signup form here -->
+                <br><a href="signup.html" class="cta-button">Sign Up</a>
+            </section><br>
+        
+            <section id="login">
+               
+                <!-- Include your login form here -->
+               <br> <a href="login.html" class="cta-button">Login</a>
+            </section>
+        
+        </div>
+        
+        <div id="video-container">
+            <!-- Add your moving video here -->
+            <video autoplay loop muted src="gif.mp4" >
+            </video>
+        </div>
+    </main>
+
+    <div class="videos">
+        <!-- Add your free lecture videos here -->
+        <h1>WATCH FREE LECTURES:</h1>
+        <div class="videos_container">
+            <!-- Video start -->
+            <div class="video">
+                <div class="video_thumbnail">
+                    <img src="How can I learn the basics of Python_ Real Python.jpg" alt="Python Thumbnail">
+                </div>
+    
+                <div class="video_details">
+                    <div class="author">
+                        <img src="logo.png" alt="Author Logo">
+                    </div>
+                    <div class="title">
+                        <h3><a href="python.html">Python for Beginners</a></h3>
+                        <a href="#">BrainWave</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Video end -->
+            <div class="video">
+                <div class="video_thumbnail">
+                    <img src="HTML & CSS for Beginners (MEGA Free Course!) _ Envato Tuts+.jpg" alt="html Thumbnail">
+                </div>
+    
+                <div class="video_details">
+                    <div class="author">
+                        <img src="logo.png" alt="Author Logo">
+                    </div>
+                    <div class="title">
+                        <h3><a href="html1.html">Mastering HTML Basics</a></h3>
+                        <a href="#">BrainWave</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Video end -->
+            <div class="video">
+                <div class="video_thumbnail">
+                    <img src="Uses of SQL.jpg" alt="dbms Thumbnail">
+                </div>
+    
+                <div class="video_details">
+                    <div class="author">
+                        <img src="logo.png" alt="Author Logo">
+                    </div>
+                    <div class="title">
+                        <h3><a href="dbms.html">Database Management System</a></h3>
+                        <a href="#">BrainWave</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Video start -->
+            <div class="video">
+                <div class="video_thumbnail">
+                    <img src="What is Software Engineering_.jpg" alt="SE Thumbnail">
+                </div>
+    
+                <div class="video_details">
+                    <div class="author">
+                        <img src="logo.png" alt="Author Logo">
+                    </div>
+                    <div class="title">
+                        <h3><a href="SE.html">Software Engineering</a></h3>
+                        <a href="#">BrainWave</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Video end -->
+            <div class="video">
+                <div class="video_thumbnail">
+                    <img src="Free Vector _ Isometric computer engineering background.jpg" alt="CA Thumbnail">
+                </div>
+    
+                <div class="video_details">
+                    <div class="author">
+                        <img src="logo.png" alt="Author Logo">
+                    </div>
+                    <div class="title">
+                        <h3><a href="CA.html">Computer Architecture</a></h3>
+                        <a href="#">BrainWave</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Video end -->
+            <div class="video">
+                <div class="video_thumbnail">
+                    <img src="How Artificial Intelligence Might Save Time.jpg" alt="AI Thumbnail">
+                </div>
+    
+                <div class="video_details">
+                    <div class="author">
+                        <img src="logo.png" alt="Author Logo">
+                    </div>
+                    <div class="title">
+                        <h3><a href="AI.php">Artificial Intelligence Tutorial</a></h3>
+                        <a href="#">BrainWave</a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+     
+    <br><br><br><br><br>
+    <div class="section-container">
+        <img src="Teacher Explaining.gif" alt="Teacher Explaining" align="left">
+        <div class="section-content">
+            <h2 style="font-size: 30px;">LEARN ANYTIME ANYWHERE!</h2>
+            <h2 style="font-size: 20px;">One subscription gets you access to all our live and recorded classes to watch from the comfort of any of your devices</h2>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+
+    <div class="section-container">
+        <img src="Online testing scene.jpg" alt="Online Testing Scene" align="left">
+        <div class="section-content">
+            <h2 style="font-size: 30px;">PRACTICE AND REVISE!</h2>
+            <h2 style="font-size: 20px;">Learning isn't just limited to classes with our practice section, mock tests, and lecture notes shared as PDFs for your revision</h2>
+        </div>
+    </div> <br><br>
+    <footer style="background-image: url('footer.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                  <!-- <img src="footer-logo.png" alt="BrainWave Logo" width="150">-->
+                    <p>&copy; 2024 BrainWave. All rights reserved.</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Contact Us</h4>
+                    <p>Email: info@brainwave.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h4>Follow Us</h4>
+                    <p>Stay connected on social media for updates and more.</p>
+                    <ul class="social-icons">
+                        <li><a href="#" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a></li>
+                        <li><a href="#" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a></li>
+                        <li><a href="#" target="_blank"><img src="linkedin-icon.png" alt="LinkedIn"></a></li>
+                        <!-- Add more social media icons as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>

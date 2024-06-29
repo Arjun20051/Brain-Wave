@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Selected Course</title>
+</head>
+<body>
+    <h2>Selected Course</h2>
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $selected_course = $_POST["course"];
+        echo "<p>You have selected the course: <strong>$selected_course</strong></p>";
+             
+    } else {
+        echo "<p>No course selected.</p>";
+    }
+    ?>
+    <p><a href="course_selection.php">Back to Course Selection</a></p>
+</body>
+</html>
